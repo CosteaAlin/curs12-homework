@@ -7,8 +7,8 @@ public class Person {
 
     public Person(String name, int age, String hairColor) {
         this.age = age;
-        this.name = (handleNulls(name) == true) ? "No name" : name;
-        this.hairColor = (handleNulls(hairColor)) ? "No hair color": hairColor;
+        this.name = (name == null) ? "No name" : name;
+        this.hairColor = (hairColor == null) ? "No hair color": hairColor;
     }
 
 
@@ -31,9 +31,5 @@ public class Person {
                 ", age=" + age +
                 ", hairColor='" + hairColor + '\'' +
                 '}';
-    }
-
-    protected Boolean handleNulls(String x) {
-        return x == null;
     }
 }

@@ -6,7 +6,7 @@ public class Employee extends Person {
 
     public Employee(String name, int age, String hairColor, String company, int salary) {
         super(name, age, hairColor);
-        this.company = (handleNulls(company)) ? "No company" : company;
+        this.company = (company == null) ? "No company" : company;
         this.salary = salary;
     }
 
